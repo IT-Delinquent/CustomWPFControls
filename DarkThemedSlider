@@ -1,0 +1,90 @@
+<Style x:Key="SliderRepeatButton1" TargetType="RepeatButton">
+    <Setter Property="SnapsToDevicePixels" Value="true" />
+    <Setter Property="OverridesDefaultStyle" Value="true" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="RepeatButton">
+                <Border SnapsToDevicePixels="True" 
+                        Background="{StaticResource SMutedWhiteBackground}" 
+                        Height="20"
+                        CornerRadius="10"
+                        Margin="0 0 -15 0"/>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+<Style x:Key="SliderRepeatButton" TargetType="RepeatButton">
+    <Setter Property="SnapsToDevicePixels" Value="true" />
+    <Setter Property="OverridesDefaultStyle" Value="true" />
+    <Setter Property="IsTabStop" Value="false" />
+    <Setter Property="Focusable" Value="false" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="RepeatButton">
+                <Border SnapsToDevicePixels="True"
+                        Background="{StaticResource SMutedGray}" 
+                        Height="20"
+                        CornerRadius="0 10 10 0"
+                        Margin="-5 0 0 0"/>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+<Style x:Key="SliderThumb" TargetType="Thumb">
+    <Setter Property="SnapsToDevicePixels" Value="true" />
+    <Setter Property="OverridesDefaultStyle" Value="true" />
+    <Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Thumb">
+                <Ellipse x:Name="Ellipse" Height="20" Width="20" 
+                         StrokeThickness="3" 
+                         Stroke="{StaticResource SMutedWhiteBackground}"
+                         Fill="{StaticResource SMutedGray}"
+                         Margin="-4"/>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="Ellipse" Property="StrokeThickness"
+                                Value="4"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+
+<ControlTemplate x:Key="Slider" TargetType="Slider">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Track Grid.Row="1" x:Name="PART_Track" >
+            <Track.IncreaseRepeatButton>
+                <RepeatButton Style="{StaticResource SliderRepeatButton}" Command="Slider.IncreaseLarge" />
+            </Track.IncreaseRepeatButton>
+            <Track.DecreaseRepeatButton>
+                <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
+            </Track.DecreaseRepeatButton>
+            <Track.Thumb>
+                <Thumb Style="{StaticResource SliderThumb}"  />
+            </Track.Thumb>
+        </Track>
+    </Grid>
+</ControlTemplate>
+
+<Style x:Key="Horizontal_Slider" TargetType="Slider">
+    <Setter Property="Focusable" Value="False"/>
+    <Setter Property="SnapsToDevicePixels" Value="true" />
+    <Setter Property="OverridesDefaultStyle" Value="true" />
+    <Style.Triggers>
+        <Trigger Property="Orientation" Value="Horizontal">
+            <Setter Property="MinHeight" Value="20" />
+            <Setter Property="MinWidth" Value="104" />
+            <Setter Property="Template" Value="{StaticResource Slider}" />
+        </Trigger>
+    </Style.Triggers>
+</Style>
