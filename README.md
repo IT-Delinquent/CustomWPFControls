@@ -1,4 +1,4 @@
-# WPF Custom Controls Library
+# Custom WPF Controls Library
 ### This is a small library containing some of my custom WPF controls/styles
 
 | **Apple Toggle Button** |
