@@ -6,3 +6,5 @@
 |![](https://github.com/IT-Delinquent/WPFCustomControls/blob/master/AppleToggleButton.gif) |          
 | **Dark Themed Slider** |
 |![](https://github.com/IT-Delinquent/WPFCustomControls/blob/master/DarkThemedSlider.gif) |
+| **Material Design Slider Toggle Button** |
+|![](https://github.com/IT-Delinquent/CustomWPFControls/blob/master/MatDesignSliderToggleButton.gif) |
