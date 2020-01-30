@@ -1,4 +1,4 @@
-<Style TargetType="{x:Type ToggleButton}">
+        <Style TargetType="{x:Type ToggleButton}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -9,7 +9,7 @@
                                 <Border.Effect>
                                     <DropShadowEffect ShadowDepth="0.5" Direction="0" Opacity="0.3" />
                                 </Border.Effect>
-                                <Ellipse x:Name="Ellipse" Fill="White" Stretch="Uniform"
+                                <Ellipse x:Name="Ellipse" Fill="#FF909090" Stretch="Uniform"
                                          Margin="-8 -4"
                                          Stroke="Gray" StrokeThickness="0.2"
                                          HorizontalAlignment="Stretch">
@@ -27,11 +27,15 @@
                                         <ColorAnimation Storyboard.TargetName="Ellipse"
                                                             Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
                                                             To="#FF0069F3"
-                                                            Duration="0:0:0.05" />
+                                                            Duration="0:0:0.05"
+                                                        AccelerationRatio="0.7"
+                                                        DecelerationRatio="0.3"/>
                                         <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                                 Storyboard.TargetProperty="Margin"
                                                                 To="20 -4 -8 -4"
-                                                                Duration="0:0:0.15" />
+                                                                Duration="0:0:0.15" 
+                                                            AccelerationRatio="0.7"
+                                                            DecelerationRatio="0.3"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -40,12 +44,16 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="Ellipse"
                                                             Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
-                                                            To="White"
-                                                            Duration="0:0:0.05" />
+                                                            To="#FF909090"
+                                                            Duration="0:0:0.05" 
+                                                        AccelerationRatio="0.7"
+                                                        DecelerationRatio="0.3"/>
                                         <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                                 Storyboard.TargetProperty="Margin"
                                                                 To="-8 -4"
-                                                                Duration="0:0:0.15" />
+                                                                Duration="0:0:0.15"
+                                                            AccelerationRatio="0.7"
+                                                        DecelerationRatio="0.3"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
