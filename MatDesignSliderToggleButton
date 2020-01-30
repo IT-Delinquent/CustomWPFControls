@@ -9,7 +9,7 @@
                                 <Border.Effect>
                                     <DropShadowEffect ShadowDepth="0.5" Direction="0" Opacity="0.3" />
                                 </Border.Effect>
-                                <Ellipse x:Name="Ellipse" Fill="#FF909090" Stretch="Uniform"
+                                <Ellipse x:Name="Ellipse" Fill="White" Stretch="Uniform"
                                          Margin="-8 -4"
                                          Stroke="Gray" StrokeThickness="0.2"
                                          HorizontalAlignment="Stretch">
