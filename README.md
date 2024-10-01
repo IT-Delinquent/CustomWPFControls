@@ -8,3 +8,5 @@
 |![](https://github.com/IT-Delinquent/WPFCustomControls/blob/master/DarkThemedSlider.gif) |
 | **Material Design Slider Toggle Button** |
 |![](https://github.com/IT-Delinquent/CustomWPFControls/blob/master/MatDesignSliderToggleButton.gif) |
+
+[mharwood.uk](https://mharwood.uk)
